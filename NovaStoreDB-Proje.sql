@@ -12,6 +12,7 @@ CREATE TABLE Categories (
 );
 GO
 
+
 --CUSTOMERS TABLE
 
 CREATE TABLE Customers (
@@ -21,6 +22,7 @@ CREATE TABLE Customers (
     Email varchar(100) UNIQUE
 );
 GO
+
 
 --PRODUCTS TABLE
 
@@ -33,6 +35,7 @@ CREATE TABLE Products (
 );
 GO
 
+
 -- ORDERS TABLE
 
 CREATE TABLE Orders (
@@ -40,5 +43,16 @@ CREATE TABLE Orders (
     CustomerID int FOREIGN KEY REFERENCES Customers(CustomerID),
     OrderDate datetime DEFAULT GETDATE(),
     TotalAmount decimal(10,2)
+);
+GO
+
+
+-- OrderDetails Table
+
+CREATE TABLE OrderDetails (
+    DetailID int IDENTITY(1,1) PRIMARY KEY,
+    OrderID int FOREIGN KEY REFERENCES Orders(OrderID),
+    ProductID int FOREIGN KEY REFERENCES Products(ProductID),
+    Quantity int
 );
 GO
