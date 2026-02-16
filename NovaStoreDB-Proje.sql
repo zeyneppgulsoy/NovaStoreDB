@@ -1,3 +1,5 @@
+--DATABASE CREATION
+
 CREATE DATABASE NovaStoreDB;
 GO
 
@@ -9,3 +11,25 @@ CREATE TABLE Categories (
     CategoryName varchar(50) NOT NULL
 );
 GO
+
+--CUSTOMERS TABLE
+
+CREATE TABLE Customers (
+    CustomerID int IDENTITY(1,1) PRIMARY KEY,
+    FullName varchar(50) NOT NULL,
+    City varchar(20),
+    Email varchar(100) UNIQUE
+);
+GO
+
+--PRODUCTS TABLE
+
+CREATE TABLE Products (
+    ProductID int IDENTITY(1,1) PRIMARY KEY,
+    ProductName varchar(100) NOT NULL,
+    Price decimal(10,2),
+    Stock int DEFAULT 0,
+    CategoryID int FOREIGN KEY REFERENCES Categories(CategoryID)
+);
+GO
+
