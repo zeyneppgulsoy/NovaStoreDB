@@ -33,3 +33,12 @@ CREATE TABLE Products (
 );
 GO
 
+-- ORDERS TABLE
+
+CREATE TABLE Orders (
+    OrderID int IDENTITY(1,1) PRIMARY KEY,
+    CustomerID int FOREIGN KEY REFERENCES Customers(CustomerID),
+    OrderDate datetime DEFAULT GETDATE(),
+    TotalAmount decimal(10,2)
+);
+GO
