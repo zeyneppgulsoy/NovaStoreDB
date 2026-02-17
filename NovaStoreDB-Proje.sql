@@ -231,3 +231,13 @@ JOIN Orders o ON c.CustomerID = o.CustomerID
 GROUP BY c.FullName
 ORDER BY TotalSpent DESC;
 GO
+
+
+--DAYS SINCE ORDER
+
+SELECT 
+    OrderID,
+    OrderDate,
+    DATEDIFF(day, OrderDate, GETDATE()) AS DaysSinceOrder
+FROM Orders;
+GO
