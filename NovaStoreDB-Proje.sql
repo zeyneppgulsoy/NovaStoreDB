@@ -141,3 +141,18 @@ INSERT INTO Products (ProductName, Price, Stock, CategoryID) VALUES
 GO
 
 
+
+--INSERT ORDERS
+
+INSERT INTO Orders (CustomerID, OrderDate, TotalAmount) VALUES 
+(1, '2026-02-01', 15250),
+(2, '2026-02-03', 870),
+(3, '2026-02-05', 12240),
+(4, '2026-02-07', 600),
+(5, '2026-02-10', 1050),
+(6, '2026-02-11', 8150),
+(7, '2026-02-12', 400),
+(8, '2026-02-13', 300),
+(9, '2026-02-15', 900),
+(10, '2026-02-16', 3800);
+GO
