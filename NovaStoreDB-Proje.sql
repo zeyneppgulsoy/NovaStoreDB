@@ -192,3 +192,19 @@ SELECT
 FROM Customers c
 INNER JOIN Orders o ON c.CustomerID = o.CustomerID;
 GO
+
+
+--PRODUCTS PURCHASED BY JOHN DOE
+
+SELECT 
+    c.FullName AS CustomerName,
+    p.ProductName,
+    p.Price,
+    cat.CategoryName
+FROM Customers c
+JOIN Orders o ON c.CustomerID = o.CustomerID
+JOIN OrderDetails od ON o.OrderID = od.OrderID
+JOIN Products p ON od.ProductID = p.ProductID
+JOIN Categories cat ON p.CategoryID = cat.CategoryID
+WHERE c.FullName = 'John Doe';
+GO
