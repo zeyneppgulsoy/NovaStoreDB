@@ -93,4 +93,51 @@ INSERT INTO Customers (FullName, City, Email) VALUES
 GO
 
 
+--INSERT PRODUCTS
+
+INSERT INTO Products (ProductName, Price, Stock, CategoryID) VALUES 
+-- Electronics (1)
+('Smartphone', 12000, 15, 1),
+('Laptop', 15000, 10, 1),
+('Tablet', 8000, 8, 1),
+
+-- Clothing (2)
+('T-Shirt', 250, 50, 2),
+('Jeans', 500, 30, 2),
+('Jacket', 1200, 15, 2),
+
+-- Books (3)
+('Novel', 120, 100, 3),
+('Magazine', 40, 200, 3),
+
+-- Cosmetics (4)
+('Lipstick', 300, 40, 4),
+('Perfume', 750, 25, 4),
+
+-- Sports (5)
+('Football', 400, 30, 5),
+('Yoga Mat', 250, 40, 5),
+
+-- Toys (6)
+('Action Figure', 350, 25, 6),
+('Board Game', 600, 15, 6),
+
+-- Health (7)
+('Vitamin C', 200, 50, 7),
+('Face Mask', 150, 100, 7),
+
+-- Stationery (8)
+('Notebook', 50, 200, 8),
+('Pen Set', 80, 150, 8),
+
+-- Shoes (9)
+('Running Shoes', 900, 20, 9),
+('Sneakers', 650, 25, 9),
+
+-- Music (10)
+('Guitar', 3000, 5, 10),
+('Headphones', 400, 30, 10),
+('Microphone', 800, 10, 10);
+GO
+
 
