@@ -56,3 +56,22 @@ CREATE TABLE OrderDetails (
     Quantity int
 );
 GO
+
+
+
+--DATA INSERTION--
+
+--INSERT CATEGORIES
+
+INSERT INTO Categories (CategoryName) VALUES 
+('Electronics'),
+('Clothing'),
+('Books'),
+('Cosmetics'),
+('Sports'),
+('Toys'),
+('Health'),
+('Stationery'),
+('Shoes'),
+('Music');
+GO
