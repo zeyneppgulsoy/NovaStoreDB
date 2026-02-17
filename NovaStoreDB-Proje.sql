@@ -171,3 +171,13 @@ INSERT INTO OrderDetails (OrderID, ProductID, Quantity) VALUES
 (9, 13, 1),               -- Action Figure
 (10, 22, 1), (10, 11, 1); -- Headphones + Football
 GO
+
+
+--PRODUCTS WITH STOCK LESS THAN 20
+
+SELECT ProductName, Stock 
+FROM Products 
+WHERE Stock < 20 
+ORDER BY Stock DESC;
+GO
+
