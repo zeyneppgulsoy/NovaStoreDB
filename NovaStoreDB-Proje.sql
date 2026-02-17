@@ -208,3 +208,14 @@ JOIN Products p ON od.ProductID = p.ProductID
 JOIN Categories cat ON p.CategoryID = cat.CategoryID
 WHERE c.FullName = 'John Doe';
 GO
+
+--PRODUCT COUNT BY CATEGORY
+
+SELECT 
+    cat.CategoryName,
+    COUNT(p.ProductID) AS ProductCount
+FROM Categories cat
+LEFT JOIN Products p ON cat.CategoryID = p.CategoryID
+GROUP BY cat.CategoryName
+ORDER BY ProductCount DESC;
+GO
