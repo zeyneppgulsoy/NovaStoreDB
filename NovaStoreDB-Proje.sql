@@ -181,3 +181,14 @@ WHERE Stock < 20
 ORDER BY Stock DESC;
 GO
 
+
+--CUSTOMER ORDERS WITH JOIN
+
+SELECT 
+    c.FullName AS CustomerName,
+    c.City,
+    o.OrderDate,
+    o.TotalAmount
+FROM Customers c
+INNER JOIN Orders o ON c.CustomerID = o.CustomerID;
+GO
