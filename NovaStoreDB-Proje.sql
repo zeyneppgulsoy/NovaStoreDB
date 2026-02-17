@@ -241,3 +241,18 @@ SELECT
     DATEDIFF(day, OrderDate, GETDATE()) AS DaysSinceOrder
 FROM Orders;
 GO
+
+
+--CREATE VIEW vw_OrderSummary
+
+CREATE VIEW vw_OrderSummary AS
+SELECT 
+    c.FullName AS CustomerName,
+    o.OrderDate,
+    p.ProductName,
+    od.Quantity
+FROM Customers c
+JOIN Orders o ON c.CustomerID = o.CustomerID
+JOIN OrderDetails od ON o.OrderID = od.OrderID
+JOIN Products p ON od.ProductID = p.ProductID;
+GO
