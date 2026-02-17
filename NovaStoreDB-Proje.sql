@@ -47,7 +47,7 @@ CREATE TABLE Orders (
 GO
 
 
--- OrderDetails Table
+-- ORDERDETAILS TABLE
 
 CREATE TABLE OrderDetails (
     DetailID int IDENTITY(1,1) PRIMARY KEY,
@@ -155,4 +155,19 @@ INSERT INTO Orders (CustomerID, OrderDate, TotalAmount) VALUES
 (8, '2026-02-13', 300),
 (9, '2026-02-15', 900),
 (10, '2026-02-16', 3800);
+GO
+
+--INSERT ORDERDETAILS
+
+INSERT INTO OrderDetails (OrderID, ProductID, Quantity) VALUES 
+(1, 1, 1), (1, 2, 1),     -- Smartphone + Laptop
+(2, 4, 2), (2, 5, 1),     -- 2 T-Shirt + 1 Jeans
+(3, 2, 1), (3, 3, 1),     -- Laptop + Tablet
+(4, 17, 1),               -- Notebook
+(5, 10, 1), (5, 9, 1),    -- Perfume + Lipstick
+(6, 1, 1), (6, 23, 1),    -- Smartphone + Microphone
+(7, 21, 1),               -- Sneakers
+(8, 7, 2),                -- 2 Novel
+(9, 13, 1),               -- Action Figure
+(10, 22, 1), (10, 11, 1); -- Headphones + Football
 GO
