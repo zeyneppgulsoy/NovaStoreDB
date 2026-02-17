@@ -75,3 +75,22 @@ INSERT INTO Categories (CategoryName) VALUES
 ('Shoes'),
 ('Music');
 GO
+
+
+--INSERT CUSTOMERS
+
+INSERT INTO Customers (FullName, City, Email) VALUES 
+('John Doe', 'New York', 'john.doe@example.com'),
+('Jane Smith', 'Los Angeles', 'jane.smith@example.com'),
+('Michael Johnson', 'Chicago', 'michael.johnson@example.com'),
+('Emily Davis', 'Houston', 'emily.davis@example.com'),
+('David Wilson', 'Phoenix', 'david.wilson@example.com'),
+('Sarah Brown', 'Philadelphia', 'sarah.brown@example.com'),
+('Chris Lee', 'San Antonio', 'chris.lee@example.com'),
+('Jessica Taylor', 'San Diego', 'jessica.taylor@example.com'),
+('Daniel Anderson', 'Dallas', 'daniel.anderson@example.com'),
+('Laura Martinez', 'San Jose', 'laura.martinez@example.com');
+GO
+
+
+
