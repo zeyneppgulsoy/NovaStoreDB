@@ -219,3 +219,15 @@ LEFT JOIN Products p ON cat.CategoryID = p.CategoryID
 GROUP BY cat.CategoryName
 ORDER BY ProductCount DESC;
 GO
+
+
+--CUSTOMER TOTAL SPENDING
+
+SELECT 
+    c.FullName AS CustomerName,
+    SUM(o.TotalAmount) AS TotalSpent
+FROM Customers c
+JOIN Orders o ON c.CustomerID = o.CustomerID
+GROUP BY c.FullName
+ORDER BY TotalSpent DESC;
+GO
