@@ -256,3 +256,9 @@ JOIN Orders o ON c.CustomerID = o.CustomerID
 JOIN OrderDetails od ON o.OrderID = od.OrderID
 JOIN Products p ON od.ProductID = p.ProductID;
 GO
+
+
+--DATABASE BACKUP
+
+BACKUP DATABASE NovaStoreDB TO DISK = 'C:\Backup\NovaStoreDB.bak';
+GO
